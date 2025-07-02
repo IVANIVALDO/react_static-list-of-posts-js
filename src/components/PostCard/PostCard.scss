@@ -1,0 +1,31 @@
+.PostInfo {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.PostInfo__header {
+  margin-bottom: 10px;
+}
+
+.PostInfo__title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.UserInfo {
+  color: #007bff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.PostInfo__body {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}

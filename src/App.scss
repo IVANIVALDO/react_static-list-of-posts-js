@@ -16,15 +16,23 @@ iframe {
 
   &__title {
     margin: 0;
+    font-size: 22px;
   }
 
   &__header {
     margin-bottom: 1em;
   }
+
+  &__body {
+    margin-top: 1em;
+    font-size: 1rem;
+  }
 }
 
 .UserInfo {
   font-weight: bold;
+  color: #0077cc;
+  text-decoration: none;
 }
 
 .CommentList {
@@ -33,4 +41,34 @@ iframe {
   gap: 0.7em;
   background-color: #eee;
   padding: 1em;
+  margin-top: 1em;
+}
+
+.CommentInfo {
+  padding: 0.5em;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  &__name {
+    font-weight: bold;
+    color: #333;
+  }
+
+  &__email {
+    color: #0077cc;
+    text-decoration: none;
+  }
+
+  &__body {
+    font-size: 0.95em;
+    color: #444;
+  }
 }
