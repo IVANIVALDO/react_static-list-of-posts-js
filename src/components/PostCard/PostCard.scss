@@ -1,8 +1,9 @@
 .PostInfo {
-  border: 1px solid #ddd;
-  padding: 16px;
   margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid #ddd;
   border-radius: 8px;
+
   background-color: #f9f9f9;
 }
 
@@ -11,8 +12,8 @@
 }
 
 .PostInfo__title {
-  font-size: 1.2rem;
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .UserInfo {
@@ -25,7 +26,7 @@
 }
 
 .PostInfo__body {
+  margin-top: 10px;
   font-size: 1rem;
   color: #333;
-  margin-top: 10px;
 }
