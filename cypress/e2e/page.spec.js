@@ -7,7 +7,7 @@ describe('Page', () => {
     cy.get('.PostInfo').should('have.length.greaterThan', 0);
   });
 
-  it('deve conter títulos em todas as postagens', () => {
+  it('deve renderizar as postagens na ordem correta', () => {
     cy.get('.PostInfo').each(post => {
       cy.wrap(post).find('.PostInfo__title').should('not.be.empty');
     });
