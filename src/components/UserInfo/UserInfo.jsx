@@ -1,7 +1,10 @@
 import React from 'react';
 
 export const UserInfo = ({ user }) => (
-  <a className="UserInfo" href={`mailto:${user.email}`}>
-    {user.name}
-  </a>
+  <div className="user-container">
+    <p className="UserInfo">{user.name}</p>
+    <a href={`mailto:${user.email}`} className="UserEmail">
+      ({user.email})
+    </a>
+  </div>
 );
