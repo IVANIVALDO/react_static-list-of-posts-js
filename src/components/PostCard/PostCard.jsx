@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
@@ -25,4 +26,23 @@ export const PostCard = ({ post }) => {
       )}
     </div>
   );
+};
+
+PostCard.propTypes = {
+  post: PropTypes.shape({
+    user: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      username: PropTypes.string,
+    }).isRequired,
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        body: PropTypes.string.isRequired,
+        email: PropTypes.string,
+      }),
+    ).isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };
