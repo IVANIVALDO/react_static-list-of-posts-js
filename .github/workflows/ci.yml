@@ -2,25 +2,38 @@ name: CI
 
 on:
   push:
-    branches: [ main, master, solution/ajustes-cypress ]
+    branches: [main]
   pull_request:
-    branches: [ main, master, solution/ajustes-cypress ]
+    branches: [main]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Run stylelint (CSS/SCSS)
+        run: npm run style-format
+
+      - name: Run prettier (format JS/JSX)
+        run: npm run format
+
+      - name: Run eslint (JS/JSX)
+        run: npm run lint-js
+
+      - name: Run stylelint lint only (CSS/SCSS)
+        run: npm run lint-css
+
       - name: Run tests
-        run: npm test
+        run: npm run test
